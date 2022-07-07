@@ -16,4 +16,25 @@ long long maxSubarraySum(int arr[], int n)
     }
     return maxsum;  
 }
+                                                        FLIP BITS  
+                                                        (CF)
+int flipBits(int* arr, int n) 
+{
+    // WRITE YOUR CODE HERE
+    int count=0,maxcount=0,x=0;
+    
+    for(int i=0;i<n;i++){
+    if(arr[i]==0)
+        count++;
+     else
+     {
+         count--;
+         x++;
+     }
+        if(count>maxcount)
+            maxcount=count;
+        if(count<0)count=0;
+    }
+    return maxcount+x;
+}                                                        
 
